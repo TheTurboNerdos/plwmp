@@ -1,0 +1,15 @@
+.dashGrid
+  padding: 10px
+  height: calc(100vh - 46px)
+  width: 100vw
+
+.dashGrid::before
+  content: ""
+  z-index: -1
+  position: fixed
+  display: block
+  padding: -10px
+  background-image: url("../../resources/images/background_grid.png")
+  filter: opacity(5%)
+  height: calc(100vh + 20px)
+  width: calc(100vw + 20px)

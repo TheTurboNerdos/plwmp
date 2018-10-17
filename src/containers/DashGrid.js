@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styles from '../styles/DashGrid.sass';
 
 
 /**
@@ -10,7 +11,7 @@ import React, {Component} from 'react';
 export default class DashGrid extends Component {
     render() {
         return (
-            <div>
+            <div className={styles.dashGrid}>
                 DashGrid Placeholder.
             </div>
         )
