@@ -14,6 +14,7 @@ module.exports = {
 
     devtool: "source-map",
     mode: "development",
+    target: 'electron-main',
 
     module: {
         rules: [
