@@ -5,6 +5,9 @@
   "repository": "https://github.com/TheTurboNerdos/Plwmp.git",
   "author": "Black-Tomcat <tomcat.frantz@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
