@@ -3,6 +3,8 @@ const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 
+const css_loader = {loader: "css-loader", options: {modules: true}};
+
 module.exports = {
     entry: {
         index: './src/index.js'
@@ -43,10 +45,15 @@ module.exports = {
                 }
             }, {
                 test: /\.sass$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
-            }, {
+                use: ["style-loader", css_loader, "sass-loader"]
+            },{
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: ["style-loader", "css-loader"],
+                include: /node_modules/
+            },{
+                test: /\.css$/,
+                use: ["style-loader", css_loader],
+                exclude: /node_modules/
             }, {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 use: {
