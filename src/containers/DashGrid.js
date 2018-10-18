@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import styles from '../styles/DashGrid.sass';
+import Widget from './Widget';
+import StaticInfo from '../components/StaticInfo';
+
+import styles from '../styles/components/dash-grid.sass';
 
 
 /**
@@ -12,7 +15,9 @@ export default class DashGrid extends Component {
     render() {
         return (
             <div className={styles.dashGrid}>
-                DashGrid Placeholder.
+                <Widget>
+                    <StaticInfo/>
+                </Widget>
             </div>
         )
     }
