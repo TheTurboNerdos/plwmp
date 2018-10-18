@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const AntdScssThemePlugin = require("antd-scss-theme-plugin");
 
@@ -89,7 +90,7 @@ module.exports = {
             filename: "./index.html",
             chunks: ["index"]
         }),
-        new AntdScssThemePlugin("src/styles/theme.sass")
+        new AntdScssThemePlugin(path.join(__dirname, 'src', 'styles', 'theme.sass'))
     ],
     watch: false,
     watchOptions: {
