@@ -31,7 +31,7 @@ export default class Widget extends Component {
         const {children, className, title} = this.props;
         return (
             <Card
-                className={styles[oneSize ? "widgetSizeOne" : className]}
+                className={[styles.widget, styles.widgetHeightFour, styles[oneSize ? "widgetWidthOne" : className]]}
                 extra={<Button onClick={() => {this.updateSize()}}>Resize</Button>}
                 title={title}
             >

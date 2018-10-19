@@ -11,7 +11,7 @@ export default class StaticInfo extends Component {
     render() {
         return (
             <Widget
-                className={"widgetSizeTwo"}
+                className={"widgetWidthTwo"}
                 title={"Team Turbo's Time Estimations"}
             >
                 <p style={pStyles}><a>Task 1</a>: Complete this example. <span style={{color: "#52c41a"}}>75% (On Time)</span></p>

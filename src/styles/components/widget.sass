@@ -1,16 +1,33 @@
-=widgetSizing($property)
+=widgetWidthSizing($property)
   width: calc(#{$property} * 25vw - 30px)
+
+=widgetHeightSizing($property)
+  height: calc(#{$property} * 100px)
+
+div.widget
   margin: 10px
   display: inline-block
 
-div.widgetSizeOne
-  +widgetSizing(1)
+div.widgetWidthOne
+  +widgetWidthSizing(1)
 
-div.widgetSizeTwo
-  +widgetSizing(2)
+div.widgetWidthTwo
+  +widgetWidthSizing(2)
 
-.widgetSizeThree
-  +widgetSizing(3)
+div.widgetWidthThree
+  +widgetWidthSizing(3)
 
-.widgetSizeFour
-  +widgetSizing(4)
+div.widgetWidthFour
+  +widgetWidthSizing(4)
+
+div.widgetHeightOne
+  +widgetHeightSizing(1)
+
+div.widgetHeightTwo
+  +widgetHeightSizing(2)
+
+div.widgetHeightThree
+  +widgetHeightSizing(3)
+
+div.widgetHeightFour
+  +widgetHeightSizing(4)
