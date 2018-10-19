@@ -15,9 +15,8 @@ export default class DashGrid extends Component {
     render() {
         return (
             <div className={styles.dashGrid}>
-                <Widget>
-                    <StaticInfo/>
-                </Widget>
+                <StaticInfo/>
+                <StaticInfo/>
             </div>
         )
     }

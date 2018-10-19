@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from '../styles/components/widget.sass';
+import {Card, Button} from "antd";
 
 /**
  *
@@ -7,12 +8,35 @@ import styles from '../styles/components/widget.sass';
  * Acts as a container for other widgets.
  *
  */
-const Widget = (props) => {
-    return (
-        <div className={styles.singleItem}>
-            {props.children}
-        </div>
-    )
-};
+export default class Widget extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            oneSize: false
+        };
+    }
 
-export default Widget;
+    updateSize = () => {
+        this.setState(prevState => ({
+            oneSize: !prevState.oneSize
+        }));
+    };
+
+    componentDidMount() {
+
+    }
+
+    render() {
+        const {oneSize} = this.state;
+        const {children, className, title} = this.props;
+        return (
+            <Card
+                className={styles[oneSize ? "widgetSizeOne" : className]}
+                extra={<Button onClick={() => {this.updateSize()}}>Resize</Button>}
+                title={title}
+            >
+                {children}
+            </Card>
+        )
+    }
+}

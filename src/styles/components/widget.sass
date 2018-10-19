@@ -1,3 +1,16 @@
-.singleItem
-  height: 100px
-  width: 100px
+=widgetSizing($property)
+  width: calc(#{$property} * 25vw - 30px)
+  margin: 10px
+  display: inline-block
+
+div.widgetSizeOne
+  +widgetSizing(1)
+
+div.widgetSizeTwo
+  +widgetSizing(2)
+
+.widgetSizeThree
+  +widgetSizing(3)
+
+.widgetSizeFour
+  +widgetSizing(4)
